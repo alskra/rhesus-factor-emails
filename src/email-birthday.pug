@@ -36,15 +36,17 @@ block content
 block action
 	tr
 		+td()(
-			align="center"
 			style={
 				padding: '56px 0 11px'
 			}
 		)
-			+span({
-				color: '#e53324',
-				font: `16px ${fontFamilyProximaNova}`,
-				'line-height': '25px'
-			})
-				block action-content
-					| В&nbsp;течении недели после вашего дня рождения, вас ожидает #[b(style={'font-size': '21px'}) скидка&nbsp;15%] в&nbsp;наших офисах на&nbsp;все анализы!
+			+table()(width="100%")
+				tr
+					+td()(align="center")
+						+span({
+							color: '#e53324',
+							font: `16px ${fontFamilyProximaNova}`,
+							'line-height': '25px'
+						})
+							block action-content
+								| В&nbsp;течении недели после вашего дня рождения, вас ожидает #[b(style={'font-size': '21px'}) скидка&nbsp;15%] в&nbsp;наших офисах на&nbsp;все анализы!
