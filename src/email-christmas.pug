@@ -3,13 +3,28 @@ include pug/mixins
 block vars
 	-
 		let baseDir = './';
-		const jsv = 'javascript:void(0)';
 
-		baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
+		// baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
 
 	-
 		const fontFamilyProximaNova = '\'Proxima Nova\', Arial, sans-serif';
 		const fontFamilyHelveticaNeueCyr = '\'HelveticaNeueCyr\', Arial, sans-serif';
+
+		let mainHeight = '611';
+
+		let mainBg = {
+			'background-image': `
+				url(${baseDir}images/christmas/bg-top.png),
+				url(${baseDir}images/christmas/bg-bottom.png),
+				url(${baseDir}images/christmas/bg.jpg)
+			`,
+			'background-repeat': 'no-repeat',
+			'background-position': '50% -47px, left calc(50% + 24px) bottom -23px, 50%',
+			'background-size': 'auto, auto, cover',
+			'background-color': '#ffffff'
+		};
+
+		let mainAlign = 'center';
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 html
@@ -33,21 +48,13 @@ html
 							'max-width': '460px'
 						}
 					)
-						// Main
 						tr
+							// Main
 							+td()(
-								height="611"
-								style={
-									padding: '0 40px 45px',
-									'background-image': `
-										url(${baseDir}images/christmas/bg-top.png),
-										url(${baseDir}images/christmas/bg-bottom.png),
-										url(${baseDir}images/christmas/bg.jpg)
-									`,
-									'background-repeat': 'no-repeat',
-									'background-position': '50% -47px, left 88% bottom -23px, 50%',
-									'background-size': 'auto, auto, cover'
-								}
+								height=mainHeight
+								style=Object.assign({
+									padding: '0 40px 85px'
+								}, mainBg)
 							)
 								+table()(
 									width="100%"
@@ -73,7 +80,7 @@ html
 
 									tr
 										+td()(
-											align="center"
+											align=mainAlign
 											style={
 												'padding-bottom': '17px'
 											}
@@ -83,11 +90,13 @@ html
 												'font': `34px ${fontFamilyHelveticaNeueCyr}`,
 												'line-height': '46px'
 											})
-												b Поздравляем с&nbsp;Рождеством!
+												b
+													block title
+														| Поздравляем с&nbsp;Рождеством!
 
 									tr
 										+td()(
-											align="center"
+											align=mainAlign
 											style={
 												'padding-bottom': '30px'
 											}
@@ -103,22 +112,13 @@ html
 											)
 
 									tr
-										+td()(
-											align="center"
-											style={
-												'padding-bottom': '48px'
-											}
-										)
-											+span({
-												color: '#323232',
-												font: `16px ${fontFamilyHelveticaNeueCyr}`,
-												'line-height': '24px'
-											})
+										block content
+											+td-content()
 												| Искренне поздравляем вас с&nbsp;Рождеством Христовым! Желаем вам свежих сил для новых свершений, творческих успехов в&nbsp;профессиональной деятельности, семейного согласия, благосостояния, верных друзей и&nbsp;надежных партнеров в&nbsp;добрых делах!
 
 									tr
 										+td()(
-											align="center"
+											align=mainAlign
 										)
 											+span({
 												color: '#3485d6',
@@ -127,8 +127,8 @@ html
 											})
 												b Берегите себя и будьте здоровы!
 
-						// Footer
 						tr
+							// Footer
 							+td()(
 								style={
 									padding: '26px 40px 22px',

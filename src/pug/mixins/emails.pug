@@ -57,3 +57,17 @@ mixin img(style = {})
 		width="100"
 		style=style
 	)&attributes(attributes)
+
+mixin td-content()
+	+td()(
+		align=mainAlign
+		style={
+			'padding-bottom': '24px'
+		}
+	)
+		+span({
+			color: '#323232',
+			font: `16px ${fontFamilyHelveticaNeueCyr}`,
+			'line-height': '24px'
+		})
+			block

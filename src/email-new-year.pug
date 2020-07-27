@@ -1,0 +1,26 @@
+extends email-christmas
+
+append vars
+	-
+		mainHeight = '613';
+
+		mainBg = {
+			'background-image': `
+				url(${baseDir}images/new-year/bg-top.png),
+				url(${baseDir}images/new-year/bg-bottom.png),
+				url(${baseDir}images/new-year/bg.jpg)
+			`,
+			'background-repeat': 'no-repeat',
+			'background-position': 'calc(50% + 31px) -41px, left calc(50% + -51px) bottom -45px, 50%',
+			'background-size': 'auto, auto, cover',
+			'background-color': '#ffffff'
+		};
+
+		// mainAlign = 'left';
+
+block title
+	| Поздравляем с&nbsp;Новым Годом!
+
+block content
+	+td-content()
+		| Поздравляем с&nbsp;Новым годом! Желаем держаться курса удачи и&nbsp;уверенно идти в&nbsp;направлении большого успеха. Пусть этот год подарит массу возможностей, перспектив и&nbsp;гениальных планов, пусть вам удастся довести каждое дело до&nbsp;победного конца, пусть каждый день в&nbsp;новом году для вас будет грандиозным и&nbsp;прибыльным
