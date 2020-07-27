@@ -10,7 +10,7 @@ block vars
 		const fontFamilyProximaNova = '\'Proxima Nova\', Arial, sans-serif';
 		const fontFamilyHelveticaNeueCyr = '\'HelveticaNeueCyr\', Arial, sans-serif';
 
-		let mainHeight = '611';
+		let mainHeight = null;
 
 		let mainStyle = {
 			padding: '0 40px 85px',
@@ -34,6 +34,50 @@ block vars
 html
 	head
 		style.
+			@font-face {
+				font-family: 'HelveticaNeueCyr';
+				src: url('#{baseDir}fonts/HelveticaNeueCyr-Roman.eot');
+				src: local('HelveticaNeueCyr-Roman'),
+				url('#{baseDir}fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+				url('#{baseDir}fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+				url('#{baseDir}fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'HelveticaNeueCyr';
+				src: url('#{baseDir}fonts/HelveticaNeueCyr-Bold.eot');
+				src: local('HelveticaNeueCyr-Bold'),
+				url('#{baseDir}fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+				url('#{baseDir}fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+				url('#{baseDir}fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+				font-weight: 700;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'Proxima Nova';
+				src: url('#{baseDir}fonts/ProximaNova-Regular.eot');
+				src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+				url('#{baseDir}fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+				url('#{baseDir}fonts/ProximaNova-Regular.woff') format('woff'),
+				url('#{baseDir}fonts/ProximaNova-Regular.ttf') format('truetype');
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'Proxima Nova';
+				src: url('#{baseDir}fonts/ProximaNova-Bold.eot');
+				src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
+				url('#{baseDir}fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+				url('#{baseDir}fonts/ProximaNova-Bold.woff') format('woff'),
+				url('#{baseDir}fonts/ProximaNova-Bold.ttf') format('truetype');
+				font-weight: 700;
+				font-style: normal;
+			}
+
 			body {
 				margin: 0;
 			}
@@ -130,6 +174,8 @@ html
 												'line-height': '1.25'
 											})
 												b Берегите себя и будьте здоровы!
+
+									block action
 
 						tr
 							// Footer

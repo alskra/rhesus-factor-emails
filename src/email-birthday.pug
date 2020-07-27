@@ -1,0 +1,50 @@
+extends email-christmas
+
+append vars
+	-
+		// mainHeight = '753';
+
+		mainStyle = Object.assign(mainStyle, {
+			padding: '0 40px 45px',
+			'background-image': `
+				url(${baseDir}images/birthday/bg-top.jpg),
+				url(${baseDir}images/birthday/bg-bottom.jpg)
+			`,
+			'background-position': '0 0, 100% 100%',
+			'background-size': 'auto, auto'
+		});
+
+		mainAlign = 'left';
+		logoAlign = 'right';
+		logoPadding = '50px 0 61px';
+
+block title
+	| Поздравляем#[br] с&nbsp;Днем Рождения!
+
+block content
+	+td-content().
+		Годы мчатся, жаль, конечно,#[br]
+		Не&nbsp;задержишь даже час.#[br]
+		Знаем: молодость не&nbsp;вечна,#[br]
+		Мы&nbsp;грустим о&nbsp;том подчас.#[br]
+		#[br]
+		Сколько стукнуло&nbsp;&mdash; неважно,#[br]
+		И&nbsp;зачем года считать?#[br]
+		В&nbsp;ногу с&nbsp;веком&nbsp;&mdash; вот что важно!#[br]
+		И&nbsp;в&nbsp;пути не&nbsp;отставать!
+
+block action
+	tr
+		+td()(
+			align="center"
+			style={
+				padding: '56px 0 11px'
+			}
+		)
+			+span({
+				color: '#e53324',
+				font: `16px ${fontFamilyProximaNova}`,
+				'line-height': '25px'
+			})
+				block action-content
+					| В&nbsp;течении недели после вашего дня рождения, вас ожидает #[b(style={'font-size': '21px'}) скидка&nbsp;15%] в&nbsp;наших офисах на&nbsp;все анализы!
