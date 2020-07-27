@@ -1,0 +1,35 @@
+extends email-christmas
+
+append vars
+	-
+		mainHeight = '613';
+
+		mainStyle = Object.assign(mainStyle, {
+			padding: '0 40px 45px',
+			'background-image': `
+				url(${baseDir}images/8-mar/bg-top.jpg),
+				url(${baseDir}images/8-mar/bg-bottom.jpg)
+			`,
+			'background-position': '0 0, 100% 100%',
+			'background-size': 'auto, auto',
+			'background-color': '#fff8f9'
+		});
+
+		mainAlign = 'left';
+		logoAlign = 'right';
+		logoPadding = '50px 0 61px';
+
+block title
+	| Поздравляем с&nbsp;8&nbsp;марта!
+
+block content
+	+td-content().
+		Снова март скребется в&nbsp;двери,#[br]
+		С&nbsp;мягким светом и&nbsp;теплом.#[br]
+		Поздравляем наших Леди#[br]
+		С&nbsp;распрекрасным женским днём!#[br]
+		#[br]
+		Пусть улыбки расцветают,#[br]
+		Как тюльпаны по&nbsp;весне!#[br]
+		Мы&nbsp;вам счастья пожелаем,#[br]
+		И&nbsp;любви, и&nbsp;светлых дней!

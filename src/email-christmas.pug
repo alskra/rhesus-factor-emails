@@ -4,7 +4,7 @@ block vars
 	-
 		let baseDir = './';
 
-		baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
+		// baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
 
 	-
 		const fontFamilyProximaNova = '\'Proxima Nova\', Arial, sans-serif';
@@ -28,6 +28,7 @@ block vars
 		let mainAlign = 'center';
 		let logoAlign = 'center';
 		let logoPadding = '65px 0 46px';
+		let colorAccent = '#3485d6';
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 html
@@ -110,7 +111,7 @@ html
 													width: '42px',
 													height: '4px',
 													'border-radius': '2px',
-													'background-color': '#3485d6'
+													'background-color': colorAccent
 												}
 											)
 
@@ -135,7 +136,7 @@ html
 							+td()(
 								style={
 									padding: '26px 40px 22px',
-									'background-color': '#3485D6'
+									'background-color': colorAccent
 								}
 							)
 								+table()(width="100%")
@@ -181,7 +182,7 @@ html
 																	}
 																)
 																	+img()(
-																		src=`${baseDir}images/world.png`
+																		src=`${baseDir}images/world${colorAccent === '#e53324' ? '-red' : ''}.png`
 																		width="24"
 																		height="24"
 																	)
@@ -209,7 +210,7 @@ html
 																	}
 																)
 																	+img()(
-																		src=`${baseDir}images/phone.png`
+																		src=`${baseDir}images/phone${colorAccent === '#e53324' ? '-red' : ''}.png`
 																		width="24"
 																		height="24"
 																	)

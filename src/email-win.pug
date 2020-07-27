@@ -1,0 +1,35 @@
+extends email-christmas
+
+append vars
+	-
+		mainHeight = '613';
+
+		mainStyle = Object.assign(mainStyle, {
+			padding: '0 40px 45px',
+			'background-image': `
+				url(${baseDir}images/win/star.jpg),
+				url(${baseDir}images/win/bg.jpg)
+			`,
+			'background-position': 'calc(50% - 139px) 8px, 100% 100%',
+			'background-size': 'auto, auto'
+		});
+
+		mainAlign = 'left';
+		logoAlign = 'right';
+		logoPadding = '50px 0 61px';
+		colorAccent = '#e53324';
+
+block title
+	| Поздравляем#[br] с&nbsp;Днем Победы!
+
+block content
+	+td-content().
+		Пусть гордо реет над страной#[br]
+		Победы славной знамя#[br]
+		И&nbsp;в&nbsp;небе мирном высоко#[br]
+		Сияет солнца пламя.#[br]
+		#[br]
+		Героев подвиг мировой#[br]
+		Всегда мы&nbsp;будем помнить,#[br]
+		Благодарим их&nbsp;за&nbsp;покой#[br]
+		И&nbsp;мир, в&nbsp;каком сейчас живём&nbsp;мы.
