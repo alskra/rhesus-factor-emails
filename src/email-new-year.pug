@@ -4,19 +4,14 @@ append vars
 	-
 		mainHeight = '613';
 
-		mainBg = {
+		mainStyle = Object.assign(mainStyle, {
 			'background-image': `
 				url(${baseDir}images/new-year/bg-top.png),
 				url(${baseDir}images/new-year/bg-bottom.png),
 				url(${baseDir}images/new-year/bg.jpg)
 			`,
-			'background-repeat': 'no-repeat',
-			'background-position': 'calc(50% + 31px) -41px, left calc(50% + -51px) bottom -45px, 50%',
-			'background-size': 'auto, auto, cover',
-			'background-color': '#ffffff'
-		};
-
-		// mainAlign = 'left';
+			'background-position': 'calc(50% + 31px) -41px, left calc(50% + -51px) bottom -45px, 50%'
+		});
 
 block title
 	| Поздравляем с&nbsp;Новым Годом!

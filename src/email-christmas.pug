@@ -4,7 +4,7 @@ block vars
 	-
 		let baseDir = './';
 
-		// baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
+		baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
 
 	-
 		const fontFamilyProximaNova = '\'Proxima Nova\', Arial, sans-serif';
@@ -12,7 +12,8 @@ block vars
 
 		let mainHeight = '611';
 
-		let mainBg = {
+		let mainStyle = {
+			padding: '0 40px 85px',
 			'background-image': `
 				url(${baseDir}images/christmas/bg-top.png),
 				url(${baseDir}images/christmas/bg-bottom.png),
@@ -25,6 +26,8 @@ block vars
 		};
 
 		let mainAlign = 'center';
+		let logoAlign = 'center';
+		let logoPadding = '65px 0 46px';
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 html
@@ -52,31 +55,31 @@ html
 							// Main
 							+td()(
 								height=mainHeight
-								style=Object.assign({
-									padding: '0 40px 85px'
-								}, mainBg)
+								style=mainStyle
 							)
 								+table()(
 									width="100%"
 								)
 									tr
-										+td()(
-											align="center"
-											style={
-												padding: '65px 0 46px'
-											}
-										)
-											+a({
-												'display': 'inline',
-												'text-decoration': 'none'
-											})(href="//lab62.ru")
-												+img({
+										// Logo
+										block logo
+											+td()(
+												align=logoAlign
+												style={
+													padding: logoPadding
+												}
+											)
+												+a({
 													'display': 'inline',
-												})(
-													src=`${baseDir}images/logo.png`
-													width="212"
-													height="53"
-												)
+													'text-decoration': 'none'
+												})(href="//lab62.ru")
+													+img({
+														'display': 'inline',
+													})(
+														src=`${baseDir}images/logo.png`
+														width="212"
+														height="53"
+													)
 
 									tr
 										+td()(

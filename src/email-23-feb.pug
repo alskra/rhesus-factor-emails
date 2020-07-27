@@ -1,0 +1,28 @@
+extends email-christmas
+
+append vars
+	-
+		mainHeight = '613';
+
+		mainStyle = Object.assign(mainStyle, {
+			padding: '0 40px 45px',
+			'background-image': `
+				url(${baseDir}images/23-feb/star.png),
+				url(${baseDir}images/23-feb/stars.png),
+				url(${baseDir}images/23-feb/bg.jpg)
+			`,
+			'background-position': 'calc(50% - 111px) -78px, calc(50% + 146px) 108px, 50% 0',
+			'background-size': 'auto, auto, 100%'
+		});
+
+		mainAlign = 'left';
+		logoAlign = 'right';
+		logoPadding = '50px 0 61px';
+
+block title
+	| Поздравляем с&nbsp;23&nbsp;февраля!
+
+block content
+	+td-content().
+		В&nbsp;какой другой стране есть такие мужчины?#[br]
+		В&nbsp;космос летали, первый в&nbsp;мире электромобиль изобрели, создали радио и&nbsp;телевидение и&nbsp;даже фотографии начали первыми в&nbsp;цвете печатать, а&nbsp;потом и&nbsp;мир весь спасли. Так пусть никогда не&nbsp;переведутся у&nbsp;нас такие мужчины, чтобы страна наша жила долго и&nbsp;счастливо и&nbsp;смотрела в&nbsp;светлое будущее.
