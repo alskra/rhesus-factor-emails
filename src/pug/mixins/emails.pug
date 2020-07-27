@@ -1,0 +1,56 @@
+mixin table()
+	table(
+		border="0"
+		cellpadding="0"
+		cellspacing="0"
+		style={
+			margin: 0,
+			padding: 0
+		}
+	)&attributes(attributes)
+		block
+
+mixin td()
+	td(valign="top")&attributes(attributes)
+		block
+
+mixin a(style = {})
+	-
+		style = Object.assign({
+			color: '#000000',
+			font: '16px Arial, sans-serif',
+			'line-height': 1.25,
+			'-webkit-text-size-adjust': 'none',
+			display: 'block'
+		}, style);
+
+	a(
+		href=jsv
+		style=style
+		target="_blank"
+	)&attributes(attributes)
+		block
+
+mixin span(style = {})
+	-
+		style = Object.assign({
+			color: '#000000',
+			font: '16px Arial, sans-serif',
+			'line-height': 1.25,
+			'-webkit-text-size-adjust': 'none',
+			display: 'block'
+		}, style);
+
+	span(style=style)&attributes(attributes)
+		block
+
+mixin img()
+	img(
+		src=""
+		alt=""
+		border="0"
+		width="100"
+		style={
+			display: 'block'
+		}
+	)&attributes(attributes)

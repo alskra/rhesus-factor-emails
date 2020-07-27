@@ -469,10 +469,10 @@ gulp.task('build', gulp.series(
 	'share',
 	gulp.parallel(
 		'images',
-		'sprites:png',
-		'sprites:svg',
-		'scss',
-		'js',
+		// 'sprites:png',
+		// 'sprites:svg',
+		// 'scss',
+		// 'js',
 	),
 ));
 

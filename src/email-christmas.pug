@@ -3,5 +3,134 @@ include pug/mixins
 block vars
 	-
 		let baseDir = './';
+		const jsv = 'javascript:void(0)';
 
+	-
+		const fontFamilyProximaNova = '"Proxima Nova", Arial, sans-serif';
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+html
+	head
+	body
+		+table()(width="100%")
+			tr
+				+td()(
+					align="center"
+				)
+					+table()(
+						width="100%"
+						align="center"
+						style={
+							width: '100%',
+							'max-width': '460px'
+						}
+					)
+						tr
+							+td()(
+								style={
+									padding: '20px 40px'
+								}
+							)
+								| Logo
+
+						tr
+							+td()(
+								style={
+									padding: '20px 40px'
+								}
+							)
+								| Content
+
+						tr
+							+td()(
+								style={
+									padding: '25px 40px',
+									'background-color': '#3485D6'
+								}
+							)
+								+table()
+									tr
+										+td()(align="center")
+											+table()
+												tr
+													+td()(
+														valign="middle"
+														style={
+															'padding-right': '5px'
+														}
+													)
+														+img()(
+															src=`${baseDir}images/copyright.svg`
+															width="9"
+															height="9"
+														)
+
+													+td()(valign="middle")
+														+span({
+															color: '#ffffff',
+															font: `16px ${fontFamilyProximaNova}`
+														})
+															| Резус-Фактор Company, 2020
+
+									tr
+										+td()(
+											align="center"
+											style={
+												'padding': '20px 0'
+											}
+										)
+											+table()
+												tr
+													+td()
+														+table()
+															tr
+																+td()(
+																	valign="middle"
+																	style={
+																		'padding-right': '8px'
+																	}
+																)
+																	+img()(
+																		src=`${baseDir}images/world.svg`
+																		width="24"
+																		height="24"
+																	)
+
+																+td()(valign="middle")
+																	+a({
+																		color: '#ffffff',
+																		font: `16px ${fontFamilyProximaNova}`,
+																		'text-decoration': 'none'
+																	})(href="//lab62.ru")
+																		| lab62.ru
+
+													+td()(
+														style={
+															'padding-left': '45px'
+														}
+													)
+														+table()
+															tr
+																+td()(
+																	valign="middle"
+																	style={
+																		'padding-right': '8px'
+																	}
+																)
+																	+img()(
+																		src=`${baseDir}images/phone.svg`
+																		width="24"
+																		height="24"
+																	)
+
+																+td()(valign="middle")
+																	+a({
+																		color: '#ffffff',
+																		font: `16px ${fontFamilyProximaNova}`,
+																		'text-decoration': 'none'
+																	})(href="tel:+74912466335")
+																		| +7 (4912) 46-63-35
+
+									tr
+										+td()(align="center")
+											| Вы можете отказаться от получения писем, перейдя по этой ссылке
