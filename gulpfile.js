@@ -330,7 +330,7 @@ gulp.task('optimize:images', () => {
 			}),
 			$.imageminMozjpeg({
 				progressive: true,
-				quality: 80,
+				quality: 90,
 			}),
 		]))
 		.pipe(gulp.dest('src/images'));

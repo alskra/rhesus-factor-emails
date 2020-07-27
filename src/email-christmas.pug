@@ -8,8 +8,8 @@ block vars
 		baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
 
 	-
-		const fontFamilyProximaNova = '"Proxima Nova", Arial, sans-serif';
-		const fontFamilyHelveticaNeueCyr = '"HelveticaNeueCyr", Arial, sans-serif';
+		const fontFamilyProximaNova = '\'Proxima Nova\', Arial, sans-serif';
+		const fontFamilyHelveticaNeueCyr = '\'HelveticaNeueCyr\', Arial, sans-serif';
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 html
@@ -33,7 +33,7 @@ html
 							+td()(
 								height="611"
 								style={
-									padding: '0 40px 50px',
+									padding: '0 40px 45px',
 									'background-image': `url(${baseDir}images/christmas-bg.jpg)`,
 									'background-repeat': 'no-repeat',
 									'background-size': 'cover'
@@ -52,7 +52,7 @@ html
 											+a({
 												'display': 'inline',
 												'text-decoration': 'none'
-											})
+											})(href="//lab62.ru")
 												+img({
 													'display': 'inline',
 												})(
@@ -82,8 +82,9 @@ html
 												'padding-bottom': '30px'
 											}
 										)
-											div(
+											span(
 												style={
+													display: 'block',
 													width: '42px',
 													height: '4px',
 													'border-radius': '2px',
@@ -157,7 +158,7 @@ html
 										)
 											+table()
 												tr
-													+td()
+													+td()(valign="middle")
 														+table()
 															tr
 																+td()(
@@ -181,6 +182,7 @@ html
 																		| lab62.ru
 
 													+td()(
+														valign="middle"
 														style={
 															'padding-left': '45px'
 														}
@@ -205,21 +207,25 @@ html
 																		font: `16px ${fontFamilyProximaNova}`,
 																		'text-decoration': 'none'
 																	})(href="tel:+74912466335")
-																		| +7 (4912) 46-63-35
+																		| +7&nbsp;(4912)&nbsp;46-63-35
 
 									tr
-										+td()(align="center")
-											+span({
-												color: '#ffffff',
-												font: `14px ${fontFamilyProximaNova}`,
-												'line-height': '17px'
-											})
-												| Вы&nbsp;можете отказаться от&nbsp;получения писем, перейдя
-
-												+a({
-													color: '#ffffff',
-													font: `14px ${fontFamilyProximaNova}`,
-													'line-height': '17px',
-													'text-decoration': 'underline'
-												})
-													b по&nbsp;этой ссылке
+										+td()
+											+table()(width="100%")
+												tr
+													+td()(align="center")
+														+span({
+															color: '#ffffff',
+															font: `14px ${fontFamilyProximaNova}`,
+															'line-height': '17px'
+														})
+															| Вы&nbsp;можете отказаться от&nbsp;получения писем, перейдя
+															|
+															+a({
+																color: '#ffffff',
+																font: `14px ${fontFamilyProximaNova}`,
+																'line-height': '17px',
+																display: 'inline',
+																'text-decoration': 'underline'
+															})(href="//lab62.ru")
+																b по&nbsp;этой ссылке
