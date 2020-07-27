@@ -1,0 +1,33 @@
+extends email-christmas
+
+append vars
+	-
+		mainHeight = '613';
+
+		mainStyle = Object.assign(mainStyle, {
+			padding: '0 40px 45px',
+			'background-image': `
+				url(${baseDir}images/1-may/bg-top.jpg),
+				url(${baseDir}images/1-may/bg-bottom.jpg)
+			`,
+			'background-position': '0 0, 100% 100%',
+			'background-size': 'auto, auto'
+		});
+
+		mainAlign = 'left';
+		logoAlign = 'right';
+		logoPadding = '50px 0 61px';
+
+block title
+	| Поздравляем с&nbsp;Первым мая!
+
+block content
+	+td-content().
+		С&nbsp;1-м Мая! С&nbsp;днем весенним!#[br]
+		В&nbsp;жизни пусть царит весна!#[br]
+		Пусть на&nbsp;солнце зеленеет#[br]
+		Изумрудами листва,#[br]
+		Яркой солнечной улыбкой#[br]
+		Этот день одарит вас,#[br]
+		Радость в&nbsp;дом придёт с&nbsp;избытком,#[br]
+		Счастье будет в&nbsp;блеске глаз!
