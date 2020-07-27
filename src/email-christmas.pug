@@ -5,7 +5,7 @@ block vars
 		let baseDir = './';
 		const jsv = 'javascript:void(0)';
 
-		baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
+		// baseDir = 'https://raw.githubusercontent.com/alskra/rhesus-factor-emails/master/src/';
 
 	-
 		const fontFamilyProximaNova = '\'Proxima Nova\', Arial, sans-serif';
@@ -14,6 +14,11 @@ block vars
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 html
 	head
+		style.
+			body {
+				margin: 0;
+			}
+
 	body
 		+table()(width="100%")
 			tr
@@ -34,9 +39,14 @@ html
 								height="611"
 								style={
 									padding: '0 40px 45px',
-									'background-image': `url(${baseDir}images/christmas-bg.jpg)`,
+									'background-image': `
+										url(${baseDir}images/christmas/bg-top.png),
+										url(${baseDir}images/christmas/bg-bottom.png),
+										url(${baseDir}images/christmas/bg.jpg)
+									`,
 									'background-repeat': 'no-repeat',
-									'background-size': 'cover'
+									'background-position': '50% -47px, left 88% bottom -23px, 50%',
+									'background-size': 'auto, auto, cover'
 								}
 							)
 								+table()(
