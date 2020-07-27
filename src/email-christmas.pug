@@ -9,6 +9,7 @@ block vars
 
 	-
 		const fontFamilyProximaNova = '"Proxima Nova", Arial, sans-serif';
+		const fontFamilyHelveticaNeueCyr = '"HelveticaNeueCyr", Arial, sans-serif';
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 html
@@ -32,6 +33,7 @@ html
 							+td()(
 								height="611"
 								style={
+									padding: '0 40px 50px',
 									'background-image': `url(${baseDir}images/christmas-bg.jpg)`,
 									'background-repeat': 'no-repeat',
 									'background-size': 'cover'
@@ -44,7 +46,7 @@ html
 										+td()(
 											align="center"
 											style={
-												padding: '57px 40px'
+												padding: '65px 0 46px'
 											}
 										)
 											+a({
@@ -60,14 +62,65 @@ html
 												)
 
 									tr
-										+td()
-											| Content
+										+td()(
+											align="center"
+											style={
+												'padding-bottom': '17px'
+											}
+										)
+											+span({
+												color: '#323232',
+												'font': `34px ${fontFamilyHelveticaNeueCyr}`,
+												'line-height': '46px'
+											})
+												b Поздравляем с&nbsp;Рождеством!
+
+									tr
+										+td()(
+											align="center"
+											style={
+												'padding-bottom': '30px'
+											}
+										)
+											div(
+												style={
+													width: '42px',
+													height: '4px',
+													'border-radius': '2px',
+													'background-color': '#3485d6'
+												}
+											)
+
+									tr
+										+td()(
+											align="center"
+											style={
+												'padding-bottom': '48px'
+											}
+										)
+											+span({
+												color: '#323232',
+												font: `16px ${fontFamilyHelveticaNeueCyr}`,
+												'line-height': '24px'
+											})
+												| Искренне поздравляем вас с&nbsp;Рождеством Христовым! Желаем вам свежих сил для новых свершений, творческих успехов в&nbsp;профессиональной деятельности, семейного согласия, благосостояния, верных друзей и&nbsp;надежных партнеров в&nbsp;добрых делах!
+
+									tr
+										+td()(
+											align="center"
+										)
+											+span({
+												color: '#3485d6',
+												font: `14px ${fontFamilyHelveticaNeueCyr}`,
+												'line-height': '1.25'
+											})
+												b Берегите себя и будьте здоровы!
 
 						// Footer
 						tr
 							+td()(
 								style={
-									padding: '23px 40px',
+									padding: '26px 40px 22px',
 									'background-color': '#3485D6'
 								}
 							)
@@ -99,7 +152,7 @@ html
 										+td()(
 											align="center"
 											style={
-												'padding': '19px 0'
+												'padding': '18px 0 20px'
 											}
 										)
 											+table()
