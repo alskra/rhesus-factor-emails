@@ -44,13 +44,16 @@ mixin span(style = {})
 	span(style=style)&attributes(attributes)
 		block
 
-mixin img()
+mixin img(style = {})
+	-
+		style = Object.assign({
+			display: 'block'
+		}, style);
+
 	img(
 		src=""
 		alt=""
 		border="0"
 		width="100"
-		style={
-			display: 'block'
-		}
+		style=style
 	)&attributes(attributes)

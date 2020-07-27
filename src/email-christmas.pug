@@ -27,30 +27,51 @@ html
 							'max-width': '460px'
 						}
 					)
+						// Main
 						tr
 							+td()(
+								height="611"
 								style={
-									padding: '20px 40px'
+									'background-image': `url(${baseDir}images/christmas-bg.jpg)`,
+									'background-repeat': 'no-repeat',
+									'background-size': 'cover'
 								}
 							)
-								| Logo
+								+table()(
+									width="100%"
+								)
+									tr
+										+td()(
+											align="center"
+											style={
+												padding: '57px 40px'
+											}
+										)
+											+a({
+												'display': 'inline',
+												'text-decoration': 'none'
+											})
+												+img({
+													'display': 'inline',
+												})(
+													src=`${baseDir}images/logo.png`
+													width="212"
+													height="53"
+												)
 
+									tr
+										+td()
+											| Content
+
+						// Footer
 						tr
 							+td()(
 								style={
-									padding: '20px 40px'
-								}
-							)
-								| Content
-
-						tr
-							+td()(
-								style={
-									padding: '25px 40px',
+									padding: '23px 40px',
 									'background-color': '#3485D6'
 								}
 							)
-								+table()
+								+table()(width="100%")
 									tr
 										+td()(align="center")
 											+table()
@@ -78,7 +99,7 @@ html
 										+td()(
 											align="center"
 											style={
-												'padding': '20px 0'
+												'padding': '19px 0'
 											}
 										)
 											+table()
@@ -135,4 +156,17 @@ html
 
 									tr
 										+td()(align="center")
-											| Вы можете отказаться от получения писем, перейдя по этой ссылке
+											+span({
+												color: '#ffffff',
+												font: `14px ${fontFamilyProximaNova}`,
+												'line-height': '17px'
+											})
+												| Вы&nbsp;можете отказаться от&nbsp;получения писем, перейдя
+
+												+a({
+													color: '#ffffff',
+													font: `14px ${fontFamilyProximaNova}`,
+													'line-height': '17px',
+													'text-decoration': 'underline'
+												})
+													b по&nbsp;этой ссылке
